@@ -1,0 +1,28 @@
+.question {
+  margin: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.break-line {
+  white-space: pre-line !important;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+table td, table th{
+  width: 50px;
+  height: 50px; 
+  border: 2px solid black; 
+  text-align: center; 
+}
+
+
+
+
+
