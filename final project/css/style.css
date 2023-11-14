@@ -1,11 +1,11 @@
 .question {
   margin: 20px;
 }
-
-.hidden {
+/*
+.hidden  {
   display: none;
 }
-
+*/
 .break-line {
   white-space: pre-line !important;
 }
@@ -21,6 +21,159 @@ table td, table th{
   border: 2px solid black; 
   text-align: center; 
 }
+
+/* Add general styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #297da7;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/* Style the questions */
+.question {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Style the question titles */
+.question h3 {
+  font-size: 18px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Style radio buttons and labels */
+.question input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Style the Next button */
+.question button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the result section */
+#result {
+  background-color: #f7f1f1;
+  border: 1px solid #f7f6f6;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  color: #043852;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the color result paragraphs */
+#result p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  }
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+<a href="#section1">Section 1</a>
+<!-- ... -->
+<div id="section1">
+  <!-- Content of Section 1 -->
+</div>
+/* Add this to your existing CSS */
+html {
+  scroll-behavior: smooth;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+.parallax {
+  background-image: url("C:/Users/El/Desktop/FinalProjectWebClient/PersonalityTest.jpg"); 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:22cm;
+  height: 500px;
+
+  /* You can set additional styling for the "parallax" div if needed */
+}
+
+
+/* Add this to your existing CSS */
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 
 
 
