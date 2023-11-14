@@ -1,11 +1,11 @@
 .question {
   margin: 20px;
 }
-/*
+
 .hidden  {
   display: none;
 }
-*/
+
 .break-line {
   white-space: pre-line !important;
 }
@@ -147,7 +147,7 @@ html {
 
 
 .parallax {
-  background-image: url("C:/Users/El/Desktop/FinalProjectWebClient/PersonalityTest.jpg"); 
+  background-image: url("../PersonalityTest.jpg"); 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
