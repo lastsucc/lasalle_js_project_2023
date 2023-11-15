@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+    }
+
+    #login-form {
+      max-width: 400px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="login-form">
+    <h2>Enter the personality test</h2>
+    <form id="authForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="text" id="password" name="password" readonly>
+
+      <button type="button" onclick="generatePassword()">Generate Password</button>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function generatePassword() {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let password = '';
+      for (let i = 0; i < 8; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        password += characters.charAt(randomIndex);
+      }
+      document.getElementById('password').value = password;
+    }
+
+    document.getElementById('authForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Add your authentication logic here
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // For demonstration purposes, just log the credentials
+      console.log('Username:', username);
+      console.log('Password:', password);
+    });
+  </script>
+
+</body>
+</html>
