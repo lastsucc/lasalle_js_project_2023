@@ -69,6 +69,14 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+.option-container {
+  display: flex;
+  align-items: center;
+}
+
+.option-container label {
+  margin-left: 8px; /* 或您希望的任何间距 */
+}
 
 /* Style the result section */
 #result {

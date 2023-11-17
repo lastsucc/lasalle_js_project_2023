@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Test</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <div class="navbar">
+     <div class="navbar">
     <a href="#">Home</a>
     <a href="#">About</a>
     <a href="#">Services</a>
@@ -19,219 +22,430 @@
     </div>
 
    <br>
-  <div id="question1" class="question">
-    <h3>1. When I make decisions:</h3>
-    <input type="radio" name="q1" value="a"> a. I do it quickly and go with the first impressions.<br/>
-    <input type="radio" name="q1" value="b"> b. I think about it, consider the options, and then decide.<br/>
-    <input type="radio" name="q1" value="c"> c. I listen to my feelings and consider how my decisions will affect others.<br/>
-    <input type="radio" name="q1" value="d"> d. I take it seriously and always try to make the right decision.<br/>
-    <button onclick="nextQuestion('question2')">Next</button>
+    <form id="decisionForm">
+        <div id="question1" class="question">
+          <h2>Question 1</h2>
+        <p>When I make decisions:</p>
+          <div>
+            <label for="option1">I think about it, consider the options and then decide.</label><br/>
+            <input type="radio" name="option1" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option1" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option1" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option1" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option2">I do it quickly and go with the first impressions.</label><br/>
+            <input type="radio" name="option2" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option2" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option2" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option2" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option3">I listen to my feelings and consider how my decisions will affect others.</label><br/>
+            <input type="radio" name="option3" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option3" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option3" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option3" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option4">I take it seriously and always try to make the right decision.</label><br/>
+            <input type="radio" name="option4" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option4" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option4" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option4" value="1" onchange="updateScores(this)" /> 1
+        </div>
+      </div>
+        <!-- 问题2的HTML，一开始是隐藏的 -->
+        <div id="question2" class="question hidden">
+        <h2>Question 2</h2>
+        <p>The best way for others to show me they care about me is to:</p>
+        <div>
+            <label for="option1">Do fun things with me.</label><br/>
+            <input type="radio" name="option1" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option1" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option1" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option1" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option2">Give me space to be myself.</label><br/>
+            <input type="radio" name="option2" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option2" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option2" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option2" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option3">Spend time with me doing whatever.</label><br/>
+            <input type="radio" name="option3" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option3" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option3" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option3" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option4">Do what I want to do; not let me down or go back on their word.</label><br/>
+            <input type="radio" name="option4" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option4" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option4" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option4" value="1" onchange="updateScores(this)" /> 1
+        </div>
+      </div>
+      <!-- question 3 -->
+        <div id="question3" class="question hidden">
+        <h2>Question 3</h2>
+        <p>When I’m with my friends,I like to provide:</p>
+        <div>
+            <label for="option1">The excitement; the fun; the jokes.</label><br/>
+            <input type="radio" name="option1" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option1" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option1" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option1" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option2">Questions; answers; a logical way of looking at things.</label><br/>
+            <input type="radio" name="option2" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option2" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option2" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option2" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option3">Concern for others; a lot of caring.</label><br/>
+            <input type="radio" name="option3" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option3" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option3" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option3" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option4">The planning; a sense of security; a good standard.</label><br/>
+            <input type="radio" name="option4" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option4" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option4" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option4" value="1" onchange="updateScores(this)" /> 1
+        </div>
+      </div>
+      <!-- question 4 -->
+        <div id="question4" class="question hidden">
+        <h2>Question 4</h2>
+        <p>I like to:</p>
+        <div>
+            <label for="option1">Act on a moment’s notice; do risky things.</label><br/>
+            <input type="radio" name="option1" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option1" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option1" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option1" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option2">Provide answers or give thought to people’s questions.</label><br/>
+            <input type="radio" name="option2" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option2" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option2" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option2" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option3">Help maintain a sense of harmony and togetherness.</label><br/>
+            <input type="radio" name="option3" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option3" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option3" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option3" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option4">Be responsible, dependable, and helpful to others.</label><br/>
+            <input type="radio" name="option4" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option4" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option4" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option4" value="1" onchange="updateScores(this)" /> 1
+        </div>
+      </div>
+
+<!-- question 5 -->
+        <div id="question5" class="question hidden">
+        <h2>Question 5</h2>
+        <p>One thing I am really good at is:</p>
+        <div>
+            <label for="option1">Acting courageously.</label><br/>
+            <input type="radio" name="option1" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option1" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option1" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option1" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option2">Thinking.</label><br/>
+            <input type="radio" name="option2" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option2" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option2" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option2" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option3">Being sensitive.</label><br/>
+            <input type="radio" name="option3" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option3" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option3" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option3" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option4">Organizing.</label><br/>
+            <input type="radio" name="option4" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option4" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option4" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option4" value="1" onchange="updateScores(this)" /> 1
+        </div>
+      </div>
+
+<!-- question 6 -->
+        <div id="question6" class="question hidden">
+        <h2>Question 6</h2>
+        <p>Friends who know me best would say that I am:</p>
+        <div>
+            <label for="option1">Competitive.</label><br/>
+            <input type="radio" name="option1" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option1" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option1" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option1" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option2">Reserved, thoughtful.</label><br/>
+            <input type="radio" name="option2" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option2" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option2" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option2" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option3">Emotional, friendly.</label><br/>
+            <input type="radio" name="option3" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option3" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option3" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option3" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option4">Neat, prepared.</label><br/>
+            <input type="radio" name="option4" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option4" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option4" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option4" value="1" onchange="updateScores(this)" /> 1
+        </div>
+      </div>
+
+<!-- question 7 -->
+        <div id="question7" class="question hidden">
+        <h2>Question 7</h2>
+        <p>My basic approach to life is:</p>
+        <div>
+            <label for="option1">To take one day at a time and have fun.</label><br/>
+            <input type="radio" name="option1" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option1" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option1" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option1" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option2">To figure out what life is all about.</label><br/>
+            <input type="radio" name="option2" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option2" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option2" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option2" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option3">To help others and be happy and succeed.</label><br/>
+            <input type="radio" name="option3" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option3" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option3" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option3" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option4">To plan for the future and make it as good as possible.</label><br/>
+            <input type="radio" name="option4" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option4" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option4" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option4" value="1" onchange="updateScores(this)" /> 1
+        </div>
+      </div>
+
+      <!-- question 8 -->
+        <div id="question8" class="question hidden">
+        <h2>Question 8</h2>
+        <p>When I am feeling discouraged or “down in the dumps:</p>
+        <div>
+            <label for="option1">I often become rude, mad, or sometimes even mean.</label><br/>
+            <input type="radio" name="option1" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option1" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option1" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option1" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option2">I withdraw, don’t talk very much, and try to think my way out of the problem.</label><br/>
+            <input type="radio" name="option2" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option2" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option2" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option2" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option3">I feel emotional, am sad, and usually like to talk it over with someone close to me.</label><br/>
+            <input type="radio" name="option3" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option3" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option3" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option3" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option4">I try to figure out what’s causing the problem and fix it.</label><br/>
+            <input type="radio" name="option4" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option4" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option4" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option4" value="1" onchange="updateScores(this)" /> 1
+        </div>
+      </div>
+
+      <!-- question 9 -->
+        <div id="question9" class="question hidden">
+        <h2>Question 9</h2>
+        <p>I feel good about myself when:</p>
+        <div>
+            <label for="option1">I can do things that are difficult.</label><br/>
+            <input type="radio" name="option1" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option1" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option1" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option1" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option2">I can solve problems or figure things out.</label><br/>
+            <input type="radio" name="option2" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option2" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option2" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option2" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option3">I can help other people.</label><br/>
+            <input type="radio" name="option3" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option3" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option3" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option3" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option4">I am appreciated or rewarded for things I do.</label><br/>
+            <input type="radio" name="option4" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option4" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option4" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option4" value="1" onchange="updateScores(this)" /> 1
+        </div>
+      </div>
+
+      <!-- question 10 -->
+        <div id="question10" class="question hidden">
+        <h2>Question 10</h2>
+        <p>Teachers at school who saw me when I wasn’t on my best behavior might describe me as:</p>
+        <div>
+            <label for="option1">Rowdy or a little wild.</label><br/>
+            <input type="radio" name="option1" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option1" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option1" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option1" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option2">Arrogant.</label><br/>
+            <input type="radio" name="option2" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option2" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option2" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option2" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option3">Talkative.</label><br/>
+            <input type="radio" name="option3" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option3" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option3" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option3" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option4">Someone who wants things my way; dominant; worrying.</label><br/>
+            <input type="radio" name="option4" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option4" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option4" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option4" value="1" onchange="updateScores(this)" /> 1
+        </div>
+      </div>
+
+      <!-- question 11 -->
+        <div id="question11" class="question hidden">
+        <h2>Question 11</h2>
+        <p>Teachers at school (who like me and in whose class I do pretty well) would probably describe me as:</p>
+        <div>
+            <label for="option1">Charming, a natural leader, clever, someone who is fun to have around.</label><br/>
+            <input type="radio" name="option1" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option1" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option1" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option1" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option2">Thoughtful, someone who has good answers, someone who likes to figure out problems.</label><br/>
+            <input type="radio" name="option2" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option2" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option2" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option2" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option3">Nice, friendly, someone who gets along with other students and is helpful to the teacher and others.</label><br/>
+            <input type="radio" name="option3" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option3" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option3" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option3" value="1" onchange="updateScores(this)" /> 1
+        </div>
+        <div>
+            <label for="option4">Neat, organized, prepared, someone who does assignments and is a good student.</label><br/>
+            <input type="radio" name="option4" value="4" onchange="updateScores(this)" /> 4
+            <input type="radio" name="option4" value="3" onchange="updateScores(this)" /> 3
+            <input type="radio" name="option4" value="2" onchange="updateScores(this)" /> 2
+            <input type="radio" name="option4" value="1" onchange="updateScores(this)" /> 1
+        </div>
+      </div>
+
+    </form>
+    <button id="nextButton" onclick="submitForm()">NEXT</button>
+
+<div id="Scores">
+    <h3>Scores</h3>
+    <table border="1">
+        <tr><th>4 Points</th><td id="score4"></td></tr>
+        <tr><th>3 Points</th><td id="score3"></td></tr>
+        <tr><th>2 Points</th><td id="score2"></td></tr>
+        <tr><th>1 Point</th><td id="score1"></td></tr>
+    </table>
   </div>
 
-  <div id="question2" class="hidden question">
-    <h3>2. The best way for others to show me they care about me is to:</h3>
-    <input type="radio" name="q2" value="a"> a. Do fun things with me.<br/>
-    <input type="radio" name="q2" value="b"> b. Give me space to be myself.<br/>
-    <input type="radio" name="q2" value="c"> c. Spend time with me doing whatever.<br/>
-    <input type="radio" name="q2" value="d"> d. Do what I want to do; not let me down or go back on their word.<br/>
-    <button onclick="nextQuestion('question3')">Next</button>
-  </div>
+    <!-- result -->
+    <div id="resultsTable" class="hidden">
+        <table>
+          <tr>
+            <th>Number</th>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+          </tr>
+          <tr id="resultRow1"><td>1</td><td></td><td></td><td></td><td></td></tr>
+          <tr id="resultRow2"><td>2</td><td></td><td></td><td></td><td></td></tr>
+          <tr id="resultRow3"><td>3</td><td></td><td></td><td></td><td></td></tr>
+          <tr id="resultRow4"><td>4</td><td></td><td></td><td></td><td></td></tr>
+          <tr id="resultRow5"><td>5</td><td></td><td></td><td></td><td></td></tr>
+          <tr id="resultRow6"><td>6</td><td></td><td></td><td></td><td></td></tr>
+          <tr id="resultRow7"><td>7</td><td></td><td></td><td></td><td></td></tr>
+          <tr id="resultRow8"><td>8</td><td></td><td></td><td></td><td></td></tr>
+          <tr id="resultRow9"><td>9</td><td></td><td></td><td></td><td></td></tr>
+          <tr id="resultRow10"><td>10</td><td></td><td></td><td></td><td></td></tr>
+          <tr id="resultRow11"><td>11</td><td></td><td></td><td></td><td></td></tr>
+          <tr id="resultRowTotal"><td>TOTAL</td><td></td><td></td><td></td><td></td></tr>
+        </table>
 
-    <div id="question3" class="hidden question" >
-    <h3>3. When I’m with my friends, I like to provide:</h3>
-    <input type="radio" name="q3" value="a"> a. The excitement; the fun; the jokes.<br/>
-    <input type="radio" name="q3" value="b"> b. Questions; answers; a logical way of looking at things.<br/>
-    <input type="radio" name="q4" value="c"> c. Concern for others; a lot of caring.<br/>
-    <input type="radio" name="q5" value="d"> d. The planning; a sense of security; a good standard.<br/>
-    <button onclick="nextQuestion('question4')">Next</button>
-  </div>
 
-  <div id="question4" class="hidden question">
-<h3>4. I like to:</h3>
-<input type="radio" name="q4" value="a"> a. The excitement; the fun; the jokes.<br/>
-<input type="radio" name="q4" value="b"> b. Questions; answers; a logical way of looking at things.<br/>
-<input type="radio" name="q4" value="c"> c. Concern for others; a lot of caring.<br/>
-<input type="radio" name="q4" value="d"> d. The planning; a sense of security; a good standard.<br/>
-<button onclick="nextQuestion('question5')">Next</button>
-  </div>
-
-  
-<div id="question5" class="hidden question">
-<h3>5. One thing I am really good at is:</h3>
-<input type="radio" name="q5" value="a"> a. Acting courageously.<br/>
-<input type="radio" name="q5" value="b"> b. Thinking.<br/>
-<input type="radio" name="q5" value="c"> c. Being sensitive.<br/>
-<input type="radio" name="q5" value="d"> d. Organizing.<br/>
-<button onclick="nextQuestion('question6')">Next</button>
-  </div>
-
-  <div id="question6" class="hidden question">
-<h3>6. Friends who know me best would say that I am:</h3>
-<input type="radio" name="q6" value="a"> a. Competitive.<br/>
-<input type="radio" name="q6" value="b"> b. Reserved, thoughtful.<br/>
-<input type="radio" name="q6" value="c"> c. Emotional, friendly.<br/>
-<input type="radio" name="q6" value="d"> d. Neat, prepared.<br/>
-<button onclick="nextQuestion('question7')">Next</button>
-  </div>
-
-  <div id="question7" class="hidden question">
-<h3>7. My basic approach to life is:</h3>
-<input type="radio" name="q7" value="a"> a. To take one day at a time and have fun.<br/>
-<input type="radio" name="q7" value="b"> b. To figure out what life is all about.<br/>
-<input type="radio" name="q7" value="c"> c. To help others and be happy and succeed.<br/>
-<input type="radio" name="q7" value="d"> d. To plan for the future and make it as good as possible.<br/>
-<button onclick="nextQuestion('question8')">Next</button>
-  </div>
-
-  <div id="question8" class="hidden question">
-<h3>8. When I am feeling discouraged or "down in the dumps":</h3>
-<input type="radio" name="q8" value="a"> a. I often become rude, mad, or sometimes even mean.<br/>
-<input type="radio" name="q8" value="b"> b. I withdraw, don't talk very much, and try to think my way out of the problem.<br/>
-<input type="radio" name="q8" value="c"> c. I feel emotional, am sad, and usually like to talk it over with someone close to me.<br/>
-<input type="radio" name="q8" value="d"> d. I try to figure out what's causing the problem and fix it.<br/>
-<button onclick="nextQuestion('question9')">Next</button>
-  </div>
-
-  <div id="question9" class="hidden question">
-<h3>9. I feel good about myself when:</h3>
-<input type="radio" name="q9" value="a"> a. I can do things that are difficult.<br/>
-<input type="radio" name="q9" value="b"> b. I can solve problems or figure things out.<br/>
-<input type="radio" name="q9" value="c"> c. I can help other people.<br/>
-<input type="radio" name="q9" value="d"> d. I am appreciated or rewarded for things I do.<br/>
-<button onclick="nextQuestion('question10')">Next</button>
-  </div>
-
-  <div id="question10" class="hidden question">
-<h3>10. Teachers at school who saw me when I wasn't on my best behavior might describe me as:</h3>
-<input type="radio" name="q10" value="a"> a. Rowdy or a little wild.<br/>
-<input type="radio" name="q10" value="b"> b. Arrogant.<br/>
-<input type="radio" name="q10" value="c"> c. Talkative.<br/>
-<input type="radio" name="q10" value="d"> d. Someone who wants things my way; dominant; worrying.<br/>
-<button onclick="nextQuestion('question11')">Next</button>
-  </div>
-
-  <div id="question11" class="hidden question">
-<h3>11. Teachers at school (who like me and in whose class I do pretty well) would probably describe me as:</h3>
-<input type="radio" name="q11" value="a"> a. Charming, a natural leader, clever, someone who is fun to have around.<br/>
-<input type="radio" name="q11" value="b"> b. Thoughtful, someone who has good answers, someone who likes to figure out problems.<br/>
-<input type="radio" name="q11" value="c"> c. Nice, friendly, someone who gets along with other students and is helpful to the teacher and others.<br/>
-<input type="radio" name="q11" value="d"> d. Neat, organized, prepared, someone who does assignments and is a good student.<br/>
-<button onclick="nextQuestion('question12')">Submit</button>
-</div>
-  
-  <!-- Add more questions here -->
-  <div id="result" class="hidden">
-  <h2>Result</h2>
-  <table>
-    <tr>
-      <th></th> 
-      <th>A</th> 
-      <th>B</th> 
-      <th>C</th> 
-      <th>D</th> 
-    </tr>
-    <tr>
-      <td>1</td> 
-      <td id="question1a"></td> 
-      <td id="question1b"></td> 
-      <td id="question1c"></td> 
-      <td id="question1d"></td> 
-    </tr>
-    <tr>
-      <td>2</td> 
-      <td id="question2a"></td> 
-      <td id="question2b"></td> 
-      <td id="question2c"></td> 
-      <td id="question2d"></td> 
-    </tr>
-    <tr>
-      <td>3</td> 
-      <td id="question3a"></td> 
-      <td id="question3b"></td> 
-      <td id="question3c"></td> 
-      <td id="question3d"></td> 
-    </tr>
-    <tr>
-      <td>4</td> 
-      <td id="question4a"></td> 
-      <td id="question4b"></td> 
-      <td id="question4c"></td> 
-      <td id="question4d"></td> 
-    </tr>
-    <tr>
-      <td></td> 
-      <td id="question5a"></td> 
-      <td id="question5b"></td> 
-      <td id="question5c"></td> 
-      <td id="question5d"></td> 
-    </tr>
-    <tr>
-      <td></td> 
-      <td id="question6a"></td> 
-      <td id="question6b"></td> 
-      <td id="question6c"></td> 
-      <td id="question6d"></td> 
-    </tr>
-    <tr>
-      <td></td> 
-      <td id="question7a"></td> 
-      <td id="question7b"></td> 
-      <td id="question7c"></td> 
-      <td id="question7d"></td> 
-    </tr>
-    <tr>
-      <td></td> 
-      <td id="question8a"></td> 
-      <td id="question8b"></td> 
-      <td id="question8c"></td> 
-      <td id="question8d"></td> 
-    </tr>
-    <tr>
-      <td></td> 
-      <td id="question9a"></td> 
-      <td id="question9b"></td> 
-      <td id="question9c"></td> 
-      <td id="question9d"></td> 
-    </tr>
-    <tr>
-      <td></td> 
-      <td id="question10a"></td> 
-      <td id="question10b"></td> 
-      <td id="question10c"></td> 
-      <td id="question10d"></td> 
-    </tr>
-    <tr>
-      <td></td> 
-      <td id="question11a"></td> 
-      <td id="question11b"></td> 
-      <td id="question11c"></td> 
-      <td id="question11d"></td> 
-    </tr>
-    <tr>
-      <td>Total</td> 
-      <td id="totala"></td>
-      <td id="totalb"></td>
-      <td id="totalc"></td>
-      <td id="totald"></td>
-    </tr>
-  </table>
-  <div>
       <p>Total your columns and place your results in the blanks below.</p>
-<p>______ a. Orange</p>
-<p>______ b. Green</p>
-<p>______ c. Blue</p>
-<p>______ d. Gold</p>
-<p>What is your first color?</p>
-<div id="firstColorResult"></div>
-<p>What is your second color?</p>
-<div id="secondColorResult"></div>
+      <p><span id="resultOrange">______</span> a. Orange</p>
+      <p><span id="resultGreen">______</span> b. Green</p>
+      <p><span id="resultBlue">______</span> c. Blue</p>
+      <p><span id="resultGold">______</span> d. Gold</p>
 
-  </div>
-</div>
+        <p>What is your first color?</p>
+        <span id="firstColorResult">______</span>
+        <p>What is your second color?</p>
+        <span id="secondColorResult">______</span>
+        <p>Name:</p>
+        <span id="nameResult">______</span>
+    </div>
 
 
-
-
-  <script src="js/script.js"></script>
+    <script src="js/scriptquestion.js"></script>
 </body>
 </html>

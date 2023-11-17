@@ -31,12 +31,12 @@ function updateScores(selectedRadio) {
   if (scoresToOptions[selectedScore] !=='' && scoresToOptions[selectedScore] !== selectedOption) {
     const previousOption = scoresToOptions[selectedScore];
 
-    // update 清空并更新之前选项的分数记录
+    // update 
     allAnswers[currentQuestion][previousOption] = null;
-    document.querySelector(`input[name="${previousOption}"][value="${selectedScore}"]`).checked = false;
+    document.querySelector(`#${currentQuestion} input[name="${previousOption}"][value="${selectedScore}"]`).checked = false;
     document.getElementById(`score${selectedScore}`).textContent = '';
 
-    // clean scoresToOptions 中的冲突记录
+    // clean scoresToOptions 
     scoresToOptions[selectedScore] = '';
   }
   // update scoresToOptions 和 allAnswers
@@ -58,20 +58,22 @@ function updateScores(selectedRadio) {
 }
 
 function checkAllSelected() {
-  // Check if each option has been selected
+  // Get current question
+  let currentQuestion = allAnswers.currentQuestion;
+
+  // Check if each option group has at least one selected
   let allSelected = true;
-  let count = 0 ;
-  for (const option of Object.keys(selections[allAnswers.currentQuestion])) {
-    count++;
-    if (!document.querySelector(`input[name="${option}"]:checked`)) {
+  for (let i = 1; i <= 4; i++) {
+    if (!document.querySelector(`#${currentQuestion} input[name="option${i}"]:checked`)) {
       allSelected = false;
       break;
     }
-  }  
-  
-  // If all options have been selected, enable the “Next” button
-  document.getElementById('nextButton').disabled = (count!==4);
+  }
+
+  // If all option groups have at least one selected, enable the "Next" button
+  document.getElementById('nextButton').disabled = !allSelected;
 }
+
 
 function submitForm() {
   // Store the current question's answer
@@ -114,7 +116,7 @@ function toggleQuestionsVisibility() {
     const nextNumber = currentNumber + 1;
     allAnswers.currentQuestion = `question${nextNumber}`;
 
-    if(nextNumber>=4)
+    if(nextNumber>=12)
     {
         // Display the results table
       const resultsTable = document.getElementById('resultsTable');
