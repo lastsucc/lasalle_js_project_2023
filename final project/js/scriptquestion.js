@@ -223,4 +223,18 @@ let colors = {1:'Orange' , 2:'Green' , 3:'Blue' , 4:'Gold'}
   document.getElementById('firstColorResult').textContent = topColor;
   document.getElementById('secondColorResult').textContent = secondTopColor;
 
+  firstColorResult.classList.add(topColor+'_word');
+  secondColorResult.classList.add(secondTopColor+'_word');
+  showResult(topColor,secondTopColor);
+}
+
+function showResult(faveColor, secondFaveColor){
+  
+  firstColor=document.getElementById(faveColor)
+  secondColor=document.getElementById(secondFaveColor)
+  
+  
+  firstColor.classList.remove('hidden')
+  secondColor.classList.remove('hidden')
+  //question1.classList.add('hidden')
 }
