@@ -181,9 +181,69 @@ html {
   }
 }
 
+  /* HOME PAGE STYLES */
 
-
-
+  .homepageBody
+  {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  
+  }
+  
+  .three-boxes-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .box {
+    text-align: center;
+    max-width: 30%;
+    border: 1px solid #ddd; /* Add border styling */
+    padding: 10px; /* Add padding for better spacing */
+  }
+  
+  .box img {
+    max-width: 100%; /* Ensure the image doesn't exceed the box width */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  }
+  
+  .image-text-container {
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color:#a5b9d3;
+  }
+  
+  .image-text-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .image-text-content img {
+    width: 50%;
+    box-sizing: border-box;
+  }
+  
+  .text-content {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-content h2, .text-content p {
+    margin: 0;
+    padding: 10px; /* Add padding for text content */
+  }
+  
 
 
 
