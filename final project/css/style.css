@@ -112,6 +112,8 @@ th, td {
 .navbar {
   background-color: #333;
   overflow: hidden;
+  padding: 10px 0;
+  margin-bottom: 20px;
   }
 
 .navbar a {
@@ -258,6 +260,7 @@ html {
     justify-content: space-between;
     align-items: center; /* Center items vertically */
     width: 100%;
+    margin-top: 20px; 
   }
   
   .footer-menu,
@@ -402,4 +405,14 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+
+.aboutcontainer{
+      width: 70%; /* Set width to 70% */
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
