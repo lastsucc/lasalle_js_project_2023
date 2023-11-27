@@ -243,7 +243,54 @@ html {
     margin: 0;
     padding: 10px; /* Add padding for text content */
   }
+
+  /* Footer */
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
   
-
-
-
+  /* Your existing styles */
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    width: 100%;
+  }
+  
+  .footer-menu,
+  .team-members {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .footer-menu ul,
+  .team-members ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-menu li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .footer-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+  }
+  
+  .team-members li {
+    margin-bottom: 5px;
+  }
