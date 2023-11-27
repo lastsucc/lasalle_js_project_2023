@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Form</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -48,7 +49,13 @@
   </style>
 </head>
 <body>
-
+     <div class="navbar">
+    <a href="home.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    </div>
+   <br><br>
   <div id="login-form">
     <h2>Enter the personality test</h2>
     <form id="authForm">
@@ -83,6 +90,7 @@
       const enteredPassword = document.getElementById('password').value;
       const generatedPassword = document.getElementById('generated-password').textContent.split(': ')[1].trim();
 
+
     // For demonstration purposes, check if the entered password matches the generated one
     if (enteredPassword === generatedPassword) {
       // Redirect to the other page
@@ -91,6 +99,7 @@
       // For demonstration purposes, just log a message
       document.getElementById('error-message').textContent = 'Incorrect password. Please try again.';
     }
+
     });
   </script>
 
