@@ -120,5 +120,20 @@ function SlideShow() {
   setTimeout(SlideShow, 3500); // Change image every 2 seconds
 } 
 
+// Formulary code
 
+function submitForm() {
+  // Assuming you want to validate the form data before submission
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  if (name && email && message) {
+    // You can replace this with your own logic for form submission
+    alert("Form submitted successfully!");
+    document.getElementById("contact-form").reset();
+  } else {
+    alert("Please fill out all fields.");
+  }
+}
 
