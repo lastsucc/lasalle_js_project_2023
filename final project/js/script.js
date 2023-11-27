@@ -104,6 +104,66 @@ function updateTotals() {
 
 }
 
+var slidePosition = 0;
+SlideShow();
 
 
+function SlideShow() {
+  var i;
+  var slides = document.getElementsByClassName("Containers");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slidePosition++;
+  if (slidePosition > slides.length) {slidePosition = 1}
+  slides[slidePosition-1].style.display = "block";
+  setTimeout(SlideShow, 3500); // Change image every 2 seconds
+} 
+
+// Formulary code
+
+function submitForm() {
+  // Assuming you want to validate the form data before submission
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+
+  if (name && email && message) {
+    // You can replace this with your own logic for form submission
+    alert("Form submitted successfully!");
+    document.getElementById("contact-form").reset();
+  } else {
+    alert("Please fill out all fields.");
+  }
+}
+
+
+// Login Script
+
+function generatePassword() {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let password = '';
+  for (let i = 0; i < 8; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    password += characters.charAt(randomIndex);
+  }
+  document.getElementById('generated-password').textContent = `Generated Password: ${password}`;
+}
+
+document.getElementById('authForm').addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  // Add your authentication logic here
+  const enteredPassword = document.getElementById('password').value;
+  const generatedPassword = document.getElementById('generated-password').textContent.split(': ')[1].trim();
+
+// For demonstration purposes, check if the entered password matches the generated one
+if (enteredPassword === generatedPassword) {
+  // Redirect to the other page
+  window.location.href = 'index.html';
+} else {
+  // For demonstration purposes, just log a message
+  console.log('Incorrect password. Please try again.');
+}
+});
 

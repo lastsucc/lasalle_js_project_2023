@@ -127,13 +127,6 @@ th, td {
   background-color: #ddd;
   color: black;
 }
-/*
-<a href="#section1">Section 1</a>
-<!-- ... -->
-<div id="section1">
-  <!-- Content of Section 1 -->
-</div>
-/* Add this to your existing CSS */
 
 html {
   scroll-behavior: smooth;
@@ -182,6 +175,121 @@ html {
     opacity: 1;
   }
 }
+
+  /* HOME PAGE STYLES */
+
+
+  .homepageBody
+  {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  
+  }
+  
+  .three-boxes-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .box {
+    text-align: center;
+    max-width: 30%;
+    border: 1px solid #ddd; /* Add border styling */
+    padding: 10px; /* Add padding for better spacing */
+  }
+  
+  .box img {
+    max-width: 100%; /* Ensure the image doesn't exceed the box width */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  }
+  
+  .image-text-container {
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color:#a5b9d3;
+  }
+  
+  .image-text-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .image-text-content img {
+    width: 50%;
+    box-sizing: border-box;
+  }
+  
+  .text-content {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-content h2, .text-content p {
+    margin: 0;
+    padding: 10px; /* Add padding for text content */
+  }
+
+  /* Footer */
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Your existing styles */
+  
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center items vertically */
+    width: 100%;
+  }
+  
+  .footer-menu,
+  .team-members {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .footer-menu ul,
+  .team-members ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-menu li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .footer-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+  }
+  
+  .team-members li {
+    margin-bottom: 5px;
+  }
 
 
 /*Results page style*/
@@ -251,4 +359,47 @@ html {
 }
 
 
+/*Contact Form Styles*/
 
+.contact-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+textarea {
+  max-height: 80px; /* Adjust the maximum height as needed */
+  resize: none; /* Disable resizing */
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
