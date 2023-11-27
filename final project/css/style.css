@@ -129,6 +129,7 @@ th, td {
   background-color: #ddd;
   color: black;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -178,6 +179,7 @@ html {
 }
 
   /* HOME PAGE STYLES */
+
 
   .homepageBody
   {
@@ -291,6 +293,73 @@ html {
   .team-members li {
     margin-bottom: 5px;
   }
+
+
+/*Results page style*/
+.text>p>span{
+  font-family: 'KG Part of Me', cursive;
+  text-decoration: underline;
+}
+.text{
+  font-family: 'KG Part of Me', cursive;
+  font-size: 20px;
+}
+.title{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.color_text{
+  font-size: 30px;
+  font-family: 'KG Part of Me', cursive;
+  text-align: center;
+  font-weight: lighter;
+  line-height: 0.9;
+  margin-bottom: 0px;
+}
+.color_text>p:nth-child(1)
+{
+  font-size: 40px;
+  font-family: 'KGNexttoMeSolid';
+  font-weight: bold;
+  line-height: 1.5;
+}
+.Orange_word
+{
+  color: orange;
+  text-shadow: 1px 1px 1px orange;
+}
+.Blue_word
+{
+  color: blue;
+  text-shadow: 1px 1px 1px blue;
+}
+.Gold_word
+{
+  color: gold;
+  text-shadow: 1px 1px 1px gold;
+}
+.Green_word
+{
+  color: green;
+  text-shadow: 1px 1px 1px green;
+}
+.color_text_small>p
+{
+  font-size: 20px;
+  font-family: 'KG Part of Me', cursive;
+  text-align: justify;
+}
+.answersheet
+{
+  margin: 30px 30px; 
+}
+#Blue, #Green, #Gold, #Orange
+{
+  border: 5px black solid;
+  padding: 5px;
+}
 
 
 /*Contact Form Styles*/
