@@ -160,7 +160,7 @@ document.getElementById('authForm').addEventListener('submit', function (event) 
 // For demonstration purposes, check if the entered password matches the generated one
 if (enteredPassword === generatedPassword) {
   // Redirect to the other page
-  window.location.href = 'index.html';
+  window.location.href = 'question.html';
 } else {
   // For demonstration purposes, just log a message
   console.log('Incorrect password. Please try again.');

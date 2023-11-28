@@ -6,13 +6,6 @@
   <title>Login Form</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #297da7;
-      text-align: center;
-      padding: 50px;
-    }
-
     #login-form {
       max-width: 400px;
       margin: auto;
@@ -67,11 +60,30 @@
       <div id="error-message" style="color: red;"></div>
       <div id="generated-password"></div>
 
-      <button type="button" onclick="generatePassword()">Generate Password</button>
+      <button type="button" onclick="generatePassword()">Generate Password</button><br/>
       <button type="submit">Login</button>
     </form>
   </div>
 
+    <footer>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="team-members">
+          <ul>
+            <li>Anthony Lijarza</li>
+            <li>Francisco Caicedo</li>
+            <li>Elaheh Yahyaei</li>
+            <li>Lin Liang</li>
+            <li>Nicolas Nassar</li>
+          </ul>
+        </div>
+      </footer>
   <script>
     function generatePassword() {
       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -94,7 +106,7 @@
     // For demonstration purposes, check if the entered password matches the generated one
     if (enteredPassword === generatedPassword) {
       // Redirect to the other page
-      window.location.href = 'index.html';
+      window.location.href = 'question.html';
     } else {
       // For demonstration purposes, just log a message
       document.getElementById('error-message').textContent = 'Incorrect password. Please try again.';
